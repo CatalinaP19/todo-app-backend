@@ -9,21 +9,21 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://to-do-list-cat.netlify.app/',  // Reemplaza con tu URL real de Netlify
-    /\.netlify\.app$/  // Permite cualquier subdominio de netlify
+    'https://to-do-list-cat.netlify.app',  // ⚠️ QUITA la barra final "/"
+    /\.netlify\.app$/
   ],
   credentials: true
 }));
 app.use(express.json());
 
-// Routes
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/todos', require('./routes/todos'));
-
-// Ruta de prueba
+// Ruta de prueba - MOVER AQUÍ (ANTES de las rutas API)
 app.get('/', (req, res) => {
   res.json({ message: 'API de Todo List funcionando' });
 });
+
+// Routes - DESPUÉS de la ruta raíz
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/todos', require('./routes/todos'));
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
