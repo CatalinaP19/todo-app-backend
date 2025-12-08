@@ -6,7 +6,14 @@ const cors = require('cors');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://to-do-list-cat.netlify.app/',  // Reemplaza con tu URL real de Netlify
+    /\.netlify\.app$/  // Permite cualquier subdominio de netlify
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
