@@ -52,11 +52,41 @@ Links de despliegue (rellenar):
 CI / Pipeline (breve)
 - Al hacer push a `main` se ejecutan: lint y tests (si existen), build y deploy automático a Render/Vercel según configuración del repo.
 
+Estructura del proyecto
+```
+todo-app-backend/
+├── src/
+│   ├── server.js                   # Punto de entrada, configuración Express
+│   ├── config/
+│   │   └── database.js             # Conexión a MongoDB
+│   ├── middleware/
+│   │   └── auth.js                 # Middleware de autenticación JWT
+│   ├── models/
+│   │   ├── User.js                 # Esquema y modelo de usuario
+│   │   └── Todo.js                 # Esquema y modelo de tarea
+│   └── routes/
+│       ├── auth.js                 # Rutas: register, login, me
+│       └── todos.js                # Rutas: GET, POST, PUT, DELETE todos
+├── .env.example                    # Variables de entorno (plantilla)
+├── package.json                    # Dependencias y scripts
+├── README.md                       # Este archivo
+├── LICENSE                         # Licencia MIT
+├── API.md                          # Documentación de endpoints
+├── ARCHITECTURA.md                 # Diagrama y descripción de arquitectura
+└── openapi.json                    # Especificación OpenAPI/Swagger
+```
+
 Archivos de interés
 - `src/server.js` - punto de entrada
 - `src/routes/auth.js` - rutas de autenticación
 - `src/routes/todos.js` - rutas de tareas
 - `src/models/User.js` y `src/models/Todo.js` - modelos de datos
+- `openapi.json` - especificación para Swagger UI
+
+Previsualizar API (Swagger UI)
+- Abre [Swagger Editor](https://editor.swagger.io) en tu navegador.
+- Copia y pega el contenido de `openapi.json` en el editor para ver la documentación interactiva.
+- O ejecuta el backend localmente y accede a `/api-docs` si está configurado con `swagger-ui-express`.
 
 Contacto
 - Mantén este README actualizado con links reales y pasos adicionales.
