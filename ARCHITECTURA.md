@@ -57,4 +57,4 @@ Pipeline de CI (breve)
 
 Notas
 
-- Para diagramas visuales en Draw.io: exportar como PNG/PDF y añadirlo al repo o incluir archivo `.drawio` junto al `ARCHITECTURA.md`.
+- Para diagramas visuales en Draw.io: exportar como PNG/PDF y añadirlo al repo o incluir archivo `.drawio` junto al `ARCHITECTURA.m

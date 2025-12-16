@@ -60,3 +60,7 @@ Archivos de interés
 
 Contacto
 - Mantén este README actualizado con links reales y pasos adicionales.
+
+Licencia
+- Copyright (c) 2025 Catalina Perez Losada
+- Este proyecto está licenciado bajo la licencia MIT — ver archivo `LICENSE`.
