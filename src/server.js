@@ -9,7 +9,8 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://to-do-list-cat.netlify.app',  // ⚠️ QUITA la barra final "/"
+    'https://to-do-list-cat.netlify.app',
+    'https://cat-todo-lis.netlify.app',  // ⚠️ QUITA la barra final "/"
     /\.netlify\.app$/
   ],
   credentials: true
